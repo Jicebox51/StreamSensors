@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -26,12 +26,216 @@
 
 .App-link {
   color: #61dafb;
+} */
+
+body {
+  background-color: transparent;
+  color: white;
+  height: 1050px;
+  width: 1920px;
+}
+
+.container {
+  display: flex;
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+}
+
+.leftColumn {
+  width: 255px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+@font-face {
+  font-family: 'Digital-7';
+  src: url('./digital-7_mono.ttf') format('truetype');
+}
+
+.sensorContainer {
+  display: flex;
+  width: 150px;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: left;
+  /* margin-top: 5px; */
+}
+
+.sensorColumn {
+  flex: 1;
+  /* padding: 10px; */
+}
+
+.sensorTitle {
+  text-align: left;
+  opacity: 0.3;
+  /* margin-top: 10px; */
+  /* border: 2px solid grey; */
+  /* padding: 10px 142px; */
+  /* text-transform: uppercase; */
+
+  h2 {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  span {
+    color: #ffffff;
+    font-size: 0.5em;
+    display: inline-block;
+  }
+}
+
+.scoreboardItem {
+  display: flex;
+  justify-content: space-between;
+  width: varSize(250);
+  margin-bottom: varSize(5);
+  font-size: varSize(20);
+  font-family: monospace;
+}
+
+.temperature-display {
+  opacity: 1;
+  font-family: 'Digital-7', sans-serif;
+  /* Use a digital-style font */
+  font-size: 2.6em;
+  /* Adjust font size as needed */
+  /* color: #00ff00; Green color for LED effect */
+  /* background-color: #000; Black background for contrast */
+  /* padding: 5px; */
+  /* border: 2px solid rgb(0, 26, 255); */
+}
+
+.usernameDisplay {
+  width: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  opacity: 1;
+  font-family: 'Digital-7', sans-serif;
+  /* Use a digital-style font */
+  font-size: 2.6em;
+  /* Adjust font size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  /* color: #00ff00; Green color for LED effect */
+  /* background-color: #000; Black background for contrast */
+  /* padding: 5px; */
+  /* border: 2px solid rgb(0, 26, 255); */
+}
+
+.usernameContainer {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  /* box-sizing: content-box; */
+  /* margin-left: 10px; Add left margin */
+}
+
+.scrolling-text {
+  width: auto;
+  overflow: hidden;
+  animation: scrollText 10s linear infinite;
+  /* margin-left: 10px;
+  padding-left: 10px;
+  scroll-margin-left: 10px;
+  scroll-padding-left: 10px; */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+    /* Start from the right side */
+  }
+
+  50% {
+    transform: translateX(0%);
+    /* Halfway through, text is centered */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* Move to the left side */
+  }
+}
+
+.segmented-digit {
+  display: inline-block;
+  opacity: 1;
+  width: 0.5em;
+  /* Adjust width for each digit segment */
+  height: 0.5em;
+  /* Adjust height for each digit segment */
+  /* background-color: #111; */
+  /* color: #00ff00; Light color for active segments */
+  /* margin-right: 2px; Add margin between segments */
+}
+
+.blue-color {
+  color: blue;
+  transition: color 0.5s;
+  /* Smooth transition for color change */
+  opacity: 1;
+}
+
+.orange-color {
+  color: orange;
+  transition: color 0.5s;
+  /* Smooth transition for color change */
+  opacity: 1;
+}
+
+.red-color {
+  color: red;
+  transition: color 0.5s;
+  /* Smooth transition for color change */
+  opacity: 1;
+}
+
+.green-color {
+  color: #00ff00;
+  /* Green color */
+  transition: color 0.5s;
+  /* Smooth transition for color change */
+  opacity: 1;
+}
+
+.centerColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  width: 255px;
+  margin-right: 0px;
+  /* Adjusted margin to padding for consistency */
+}
+
+/* Align content in left and right columns */
+.leftColumn ul,
+.rightColumn ul {
+  text-align: left;
+  padding-inline-start: 0px;
+}
+
+/* Adjust content margins */
+.leftColumn ul {
+  text-align: left;
+  margin-left: 0px;
+}
+
+.rightColumn ul {
+  text-align: left;
+  margin-right: 0px;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
